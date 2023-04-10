@@ -2,9 +2,11 @@
 
 #python nodejs 태권도 정리
 
-## 1. 목표 : 태권도장과 수련생 및 학부모들이 사용할 수 있는 태권도장 이용 관리 서비스
+## 1. 목표
+ - 태권도장과 수련생 및 학부모들이 사용할 수 있는 태권도장 이용 관리 서비스
 
-## 2. 스택 : python, nodejs, mysql, express, nginx, uwsgi, aws, fcm, sequelize, jwt, redis, dbeaver
+## 2. 스택
+ - python, nodejs, mysql, express, nginx, uwsgi, aws, fcm, sequelize, jwt, redis, dbeaver
 
 ## 3. 사용자 구성
  a. 태권도장 :
