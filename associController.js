@@ -1,7 +1,4 @@
 const models = require("../models");
-const { sign, refresh } = require('../util/jwt-util');
-const bcrypt = require("bcrypt")
-const authJwt = require('../util/authJWT');
 const { sequelize } = require('../models')
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
@@ -9,17 +6,7 @@ const Op = Sequelize.Op;
 const crypto = require("crypto");
 const generateFileName = (bytes = 8) =>
     crypto.randomBytes(bytes).toString("hex");
-const { uploadFile, getObjectSignedUrl, deleteFile } = require("../util/s3.js");
-// const {AS_cal_UserCount} = require("../controller/")
-
-const { AS_cal_UserCount } = require("../controller/utilController.js");
-
-const jwt = require('jsonwebtoken');
-const { TableHints } = require("sequelize");
-const swaggerAutogen = require("swagger-autogen");
-const db = require("../models");
-const note = require("../models/note");
-const secret = "Hello";
+const { uploadFile, deleteFile } = require("../util/s3.js");
 
 const region_infos = [
     {"서울" : ["강남구", "강동구", "강북구", "강서구", "관악구", "광진구", "구로구", "금천구", "노원구", "도봉구", "동대문구", "동작구", "마포구", "서대문구", "서초구", "성동구", "성북구", "송파구", "양천구", "영등포구", "용산구", "은평구", "종로구", "중구", "중랑구"]},
