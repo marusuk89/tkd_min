@@ -5,16 +5,7 @@ const { sequelize } = require('../models')
 const crypto = require("crypto");
 const generateFileName = (bytes = 8) =>
     crypto.randomBytes(bytes).toString("hex");
-const { uploadFile, getObjectSignedUrl, deleteFile } = require("../util/s3.js");
-
-const { sign, refresh } = require('../util/jwt-util');
-const bcrypt = require("bcrypt")
-const authJwt = require('../util/authJWT');
-const jwt = require('jsonwebtoken');
-const { TableHints, and } = require("sequelize");
-const swaggerAutogen = require("swagger-autogen");
-const registerKwanJang = require("../controller/kwanjangController")
-const secret = "Hello";
+const { uploadFile, deleteFile } = require("../util/s3.js");
 
 const DEFAULT_PROFILE_URL = "student/default_profile.jpg"
 
