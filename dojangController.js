@@ -6,18 +6,7 @@ const Op = Sequelize.Op;
 const crypto = require("crypto");
 const generateFileName = (bytes = 8) =>
     crypto.randomBytes(bytes).toString("hex");
-const { uploadFile, getObjectSignedUrl, deleteFile } = require("../util/s3.js");
-
-const {fnImgUpload} = require("../controller/utilController")
-const { sign, refresh } = require('../util/jwt-util');
-const bcrypt = require("bcrypt")
-const authJwt = require('../util/authJWT');
-const jwt = require('jsonwebtoken');
-const { TableHints } = require("sequelize");
-const swaggerAutogen = require("swagger-autogen");
-const registerKwanJang = require("../controller/kwanjangController");
-const schedule = require("../models/schedule");
-const secret = "Hello";
+const { uploadFile,  deleteFile } = require("../util/s3.js");
 
 const DEFAULT_DOJANG_URL = "dojang/default_dojang_logo.png"
 
