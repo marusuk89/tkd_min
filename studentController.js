@@ -2,23 +2,10 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 const { sequelize } = require('../models')
 const models = require("../models");
-
-const {fnImgUpload} = require("../controller/utilController")
 const crypto = require("crypto");
-const sharp = require("sharp");
 const generateFileName = (bytes = 8) =>
     crypto.randomBytes(bytes).toString("hex");
-const { uploadFile, getObjectSignedUrl, deleteFile } = require("../util/s3.js");
-
-const { sign, refresh } = require('../util/jwt-util');
-const bcrypt = require("bcrypt")
-const authJwt = require('../util/authJWT');
-const jwt = require('jsonwebtoken');
-const { TableHints } = require("sequelize");
-const swaggerAutogen = require("swagger-autogen");
-const registerKwanJang = require("../controller/kwanjangController");
-const { truncate } = require('fs');
-const secret = "Hello";
+const { uploadFile, deleteFile } = require("../util/s3.js");
 
 const DEFAULT_PROFILE_URL = "student/default_profile.jpg"
 
