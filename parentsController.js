@@ -1,7 +1,4 @@
 const models = require("../models");
-const { sign, refresh } = require('../util/jwt-util');
-const bcrypt = require("bcrypt")
-const authJwt = require('../util/authJWT');
 const { sequelize } = require('../models')
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
@@ -9,17 +6,7 @@ const Op = Sequelize.Op;
 const crypto = require("crypto");
 const generateFileName = (bytes = 8) =>
     crypto.randomBytes(bytes).toString("hex");
-const { uploadFile, getObjectSignedUrl, deleteFile } = require("../util/s3.js");
-
-const jwt = require('jsonwebtoken');
-const { TableHints } = require("sequelize");
-const swaggerAutogen = require("swagger-autogen");
-const registerKwanJang = require("../controller/kwanjangController");
-const db = require("../models");
-const note = require("../models/note");
-const secret = "Hello";
-
-const DEFAULT_PROFILE_URL = "student/default_profile.jpg"
+const { uploadFile, deleteFile } = require("../util/s3.js");
 
 module.exports = {
     //parents
