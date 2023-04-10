@@ -1,11 +1,12 @@
 # tkd_min
-python nodejs 태권도 정리
 
-1. 목표 : 태권도장과 수련생 및 학부모들이 사용할 수 있는 태권도장 이용 관리 서비스
+#python nodejs 태권도 정리
 
-2. 스택 : python, nodejs, mysql, express, nginx, uwsgi, aws, fcm, sequelize, jwt, redis, dbeaver
+##1. 목표 : 태권도장과 수련생 및 학부모들이 사용할 수 있는 태권도장 이용 관리 서비스
 
-3. 사용자 구성
+##2. 스택 : python, nodejs, mysql, express, nginx, uwsgi, aws, fcm, sequelize, jwt, redis, dbeaver
+
+##3. 사용자 구성
  a. 태권도장 :
   a-1. 관장 : 태권도장의 관리 권한을 모두 갖고 있는 사용자
   a-2. 사범 : 태권도장의 일부 권한을 갖고 있으며 주로 자신이 속해 있는 반에 대한 권한이 있는 사용자
@@ -20,7 +21,7 @@ python nodejs 태권도 정리
  *사용자들은 초대를 받고 수락을 받아야 이용 가능하다.
  *계정과 사용자 정보를 분리하였다.(회원가입을 하지 않은 수련생 또한 관장이 입력해야 하기 때문)
 
-4. 코드 구성
+##4. 코드 구성
  a. Association(협회)
  b. Car(차량)
  c. Dojang(도장)
