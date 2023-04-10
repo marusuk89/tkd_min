@@ -1,16 +1,10 @@
 const models = require("../models");
-const bcrypt = require("bcrypt")
-const authJwt = require('../util/authJWT');
 
 const crypto = require("crypto");
 const generateFileName = (bytes = 8) =>
     crypto.randomBytes(bytes).toString("hex");
-const { uploadFile, getObjectSignedUrl, deleteFile } = require("../util/s3.js");
-
-const jwt = require('jsonwebtoken');
-const swaggerAutogen = require("swagger-autogen");
+const { uploadFile, deleteFile } = require("../util/s3.js");
 const { sequelize } = require('../models')
-const Sequelize = require('sequelize');
 
 module.exports = {
     //car
