@@ -6,18 +6,9 @@ const models = require("../models");
 const crypto = require("crypto");
 const generateFileName = (bytes = 8) =>
     crypto.randomBytes(bytes).toString("hex");
-const { uploadFile, getObjectSignedUrl, deleteFile } = require("../util/s3.js");
+const { uploadFile, deleteFile } = require("../util/s3.js");
 
-const { sign, refresh } = require('../util/jwt-util');
-const bcrypt = require("bcrypt")
 const { sendGroup } = require('../util/fcm');
-const authJwt = require('../util/authJWT');
-const jwt = require('jsonwebtoken');
-const { TableHints } = require("sequelize");
-const swaggerAutogen = require("swagger-autogen");
-const registerKwanJang = require("../controller/kwanjangController")
-const secret = "Hello";
-
 
 module.exports = {
     //class
