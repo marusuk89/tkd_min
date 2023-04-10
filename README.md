@@ -24,13 +24,13 @@
  > **- 계정과 사용자 정보를 분리하였다.(회원가입을 하지 않은 수련생 또한 관장이 입력해야 하기 때문)**</br>
 
 ## 4. 코드 구성
- a. Association(협회)
- b. Car(차량)
- c. Dojang(도장)
- d. Class(반)
- e. kwanjang(관장)
- f. Sabum(사범)
- g. Student(수련생)
- h. Parents(학부모)
- i. User(사용자)
- j. Util(기능)
+ a. Association(협회)</br>
+ b. Car(차량)</br>
+ c. Dojang(도장)</br>
+ d. Class(반)</br>
+ e. kwanjang(관장)</br>
+ f. Sabum(사범)</br>
+ g. Student(수련생)</br>
+ h. Parents(학부모)</br>
+ i. User(사용자)</br>
+ j. Util(기능)</br>
