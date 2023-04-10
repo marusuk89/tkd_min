@@ -1,17 +1,10 @@
 const models = require("../models");
 const Sequelize = require('sequelize');
-const { sequelize } = require('../models')
 const Op = Sequelize.Op;
 const { sign, refresh, verify } = require('../util/jwt-util');
 const bcrypt = require("bcrypt")
-const authJwt = require('../util/authJWT');
 const jwt = require('jsonwebtoken');
-const { TableHints } = require("sequelize");
-const swaggerAutogen = require("swagger-autogen");
-const registerKwanJang = require("../controller/kwanjangController");
-// const { Sequelize } = require("../models");
 const { sendGroup } = require('../util/fcm');
-const secret = "Hello";
 const { redisCli } = require("../util/redis-util");
 
 
