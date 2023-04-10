@@ -6,13 +6,7 @@ const { sequelize } = require('../models');
 const crypto = require("crypto");
 const generateFileName = (bytes = 8) =>
     crypto.randomBytes(bytes).toString("hex");
-const { uploadFile, getObjectSignedUrl, deleteFile } = require("../util/s3.js");
-
-const { database } = require("firebase-admin");
-const { RDS } = require("aws-sdk");
-const sabumlicense = require("../models/sabumlicense");
-const { ObjectAlreadyInActiveTierError } = require("@aws-sdk/client-s3");
-const Op = Sequelize.Op;
+const { uploadFile, deleteFile } = require("../util/s3.js");
 
 const DEFAULT_PROFILE_URL = "student/default_profile.jpg"
 
